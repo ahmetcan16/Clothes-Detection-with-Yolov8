@@ -31,7 +31,7 @@ if source_radio == "IMAGE in locale":
     with col1:
         try:
             if source_img is None:
-                default_image_path = str("images\\trendyol.png")
+                default_image_path = str("trendyol.png")
                 default_image = PIL.Image.open(default_image_path)
                 st.image(default_image_path, caption="Default Image", use_column_width=True)
                 
@@ -45,7 +45,7 @@ if source_radio == "IMAGE in locale":
 
     with col2:
         if source_img is None:
-            default_detected_image_path = str("images\\trendyol_detected.png")
+            default_detected_image_path = str("trendyol_detected.png")
             default_detected_image = PIL.Image.open(default_detected_image_path)
             st.image(default_detected_image_path, caption='Detected Image', use_column_width=True)
         else:

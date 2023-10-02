@@ -4,7 +4,7 @@ from ultralytics import YOLO
 import PIL
 import requests
 from io import BytesIO
-
+import cv2
 
 st.set_page_config( page_title = "Object Detection using YOLOv8", page_icon="🤖", layout="wide", initial_sidebar_state="expanded")
 st.title("Clothes Detection using YOLOv8")
@@ -63,7 +63,7 @@ if source_radio == "IMAGE in locale":
                     st.write("No image is uploaded yet!")
                     
 else:
-    st.write("Link üzerinden tahmin yapmak istiyorsanız; resme sağ tıklayıp *Resim adresini kopyala* kısmından url yi almanız ve Sidebar'a kopyalamanız gerekmektedir.")
+    st.write("Link uzerinden tahmin yapmak istiyorsaniz; resme sag tiklayip *Resim adresini kopyala* kismindan url yi almaniz ve Sidebar'a kopyalamaniz gerekmektedir.")
     image_url = st.sidebar.text_input("Give an image Link...")
     col1, col2 = st.columns(2)
     with col1:

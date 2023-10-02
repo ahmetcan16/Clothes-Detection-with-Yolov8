@@ -18,11 +18,11 @@ except Exception as ex:
     st.error(f"Unable to load model. Check the specified path: {model_path}")
     st.error(ex)
     
-source_radio = st.sidebar.radio("Select Source", ["IMAGE in locale", "Image in link"])
+source_radio = st.sidebar.radio("Select Source", ["Image in locale", "Image in link"])
 
 source_img = None
 
-if source_radio == "IMAGE in locale":
+if source_radio == "Image in locale":
     st.write("Classes : T-shirt,  Dress,  Jacket,  Pants,  Shirt,  Short,  Skirt,  Sweater")
     source_img = st.sidebar.file_uploader("Choose an image...", type = ("jpg", "jpeg", "png", 'bmp', 'webp'))
 
